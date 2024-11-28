@@ -1,0 +1,92 @@
+body {
+    background-color: #2e2e2e; /* Dark grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.terminal {
+    background-color: black;
+    color: #00FF00; /* Terminal green */
+    font-family: 'Courier New', Courier, monospace; /* Old IBM TN3270 font style */
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Drop shadow */
+    align-items: flex-start; /* Align text to the top */
+    position: relative;
+    margin: 1%;
+    width: 90%;
+}
+
+.bottom-menu {
+    text-align: center;
+    color: #00FF00; /* Terminal green */
+    font-family: 'Courier New', Courier, monospace;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+.cobol-text {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0.5em;
+    color: #088308;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.cobol-text:hover {
+    text-decoration: underline; /* Underline text on hover */
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.box-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.box {
+    border: 2px dashed #088308;
+    padding: 20px;
+    width: 45%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.box ul {
+    list-style-type: square; /* Change bullet points to square */
+}
+
+.box-more-link {
+    color: #00FF00; /* Initial color */
+    text-decoration: none; /* Remove underline */
+}
+
+.box-more-link:hover {
+    color: #88FF88; /* Brighter color on hover */
+}
+
+.peering-map {
+    text-align: center;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.dark-blue {
+    color: #3737ff;
+}
