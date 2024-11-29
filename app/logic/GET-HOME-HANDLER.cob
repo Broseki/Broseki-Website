@@ -1,5 +1,5 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. CGI-HANDLER.
+       PROGRAM-ID. GET-HOME-HANDLER.
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
@@ -21,4 +21,5 @@
            DISPLAY "<p>Query String: " QUERY-STRING "</p>"
            DISPLAY "</body></html>"
 
-           STOP RUN.
+           EXIT PROGRAM.
+           END PROGRAM GET-HOME-HANDLER.

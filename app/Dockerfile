@@ -8,9 +8,9 @@ RUN apt-get update && apt-get install -y \
 COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
 RUN mkdir -p /usr/lib/cgi-bin
 
-COPY logic/script.cob /usr/lib/cgi-bin/
+COPY logic/* /usr/lib/cgi-bin/
 WORKDIR /usr/lib/cgi-bin
-RUN cobc -x script.cob -o script.cgi
-RUN chmod +x script.cgi
+RUN cobc -x ROUTER.cob GET-HOME-HANDLER.cob 404-HANDLER.cob -o site.cgi
+RUN chmod +x site.cgi
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]
