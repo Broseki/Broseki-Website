@@ -3,23 +3,47 @@
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
-       01 PATH-INFO    PIC X(256).
-       01 REQ-METHOD   PIC X(10).
-       01 QUERY-STRING PIC X(256).
-
        PROCEDURE DIVISION.
-           ACCEPT PATH-INFO FROM ENVIRONMENT "PATH_INFO"
-           ACCEPT REQ-METHOD FROM ENVIRONMENT "REQUEST_METHOD"
-           ACCEPT QUERY-STRING FROM ENVIRONMENT "QUERY_STRING"
-
+      *    Just a simple landing page until I add more templating
            DISPLAY "Content-type: text/html"
            DISPLAY X"0A"
-           DISPLAY "<html><body>"
-           DISPLAY "<h1>COBOL CGI Response</h1>"
-           DISPLAY "<p>Requested Path: " PATH-INFO "</p>"
-           DISPLAY "<p>Request Method: " REQ-METHOD "</p>"
-           DISPLAY "<p>Query String: " QUERY-STRING "</p>"
-           DISPLAY "</body></html>"
+           DISPLAY "<!DOCTYPE html>"
+           DISPLAY "<html>"
+           DISPLAY "<head>"
+           DISPLAY "<title>Broseki</title>"
+           DISPLAY "<meta name='description' content='Computer "
+           DISPLAY "Scientist and Explorer of Arcane Things'>"
+           DISPLAY "<meta name='keywords' content='broseki, computer "
+           DISPLAY "science, RIT, embedded software, COBOL'>"
+           DISPLAY "</head>"
+           DISPLAY "<body>"
+           DISPLAY "<h1>Broseki</h1>"
+           DISPLAY "<p>I used to have a blog running here that was "
+           DISPLAY "powered by Plan9. That was not weird enough for my "
+           DISPLAY "taste so now I am developing a COBOL based web "
+           DISPLAY "framework. You can see the progress "
+           DISPLAY "<a href='"
+           DISPLAY "https://github.com/Broseki/Broseki-Website'>"
+           DISPLAY "here</a>.</p>"
+           DISPLAY "<p>"
+           DISPLAY "<a href='https://github.com/Broseki'>Github</a> | "
+           DISPLAY "<a href='"
+           DISPLAY "https://www.linkedin.com/in/"
+           DISPLAY "michael-canning-490703191/'>"
+           DISPLAY "LinkedIn</a> | "
+           DISPLAY "<a href='https://broseki.eth.link'>"
+           DISPLAY ".eth Landing Page</a>"
+           DISPLAY "</p>"
+           DISPLAY "<pre>"
+           DISPLAY "               __"
+           DISPLAY "              / _)"
+           DISPLAY "     _.----._/ /"
+           DISPLAY "    /         /"
+           DISPLAY " __/ (  | (  |"
+           DISPLAY "/__.-'|_|--|_|"
+           DISPLAY "</pre>"
+           DISPLAY "</body>"
+           DISPLAY "</html>"
 
            EXIT PROGRAM.
            END PROGRAM GET-HOME-HANDLER.
