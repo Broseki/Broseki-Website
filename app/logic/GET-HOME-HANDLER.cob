@@ -27,6 +27,7 @@
            DISPLAY "here</a>.</p>"
            DISPLAY "<p>"
            DISPLAY "<a href='https://github.com/Broseki'>Github</a> | "
+           DISPLAY "<a href='https://gitlab.com/Broseki'>GitLab</a> | "
            DISPLAY "<a href='"
            DISPLAY "https://www.linkedin.com/in/"
            DISPLAY "michael-canning-490703191/'>"
